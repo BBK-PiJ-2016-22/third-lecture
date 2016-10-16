@@ -1,35 +1,28 @@
+print "Write some text: ";
+String userText = System.console().readLine();
 
-print "Write a short string followed by some text, devide it by space: ";
-String userInput = System.console().readLine();
 
-def listForLetters = [];
+print "Write a short string: ";
+String userString = System.console().readLine();
 
-def listForText = [];
 
-boolean flag = false;
-for (int i =0; i < userInput.length(); i++){
-
-	while(flag == false){
+for(int i = 0; i < userString.length(); i++){
+	
+	for(int j = 0; j <userText.length(); j++){
+	
+		if(userString.charAt(i) == userText.charAt(j)){
 		
-		if (userInput.charAt(i) != " "){
-		
-			listForText.add(userInput[i]); 
-		
-		} else {
-		
-			flag = true;	
-		
+			println userText.charAt(j);
+	
 		}
-	}
-	
-	if (userInput.charAt(i) != " "){
-		
-		listForLetters.add(userInput[i]); 		
 	
 	}
-
-
 }
 
-println listForLetters;
-println listForText;
+
+
+
+
+
+
+// charAt() and length()
